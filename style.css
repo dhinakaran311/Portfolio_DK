@@ -75,5 +75,11 @@ address {
     padding-top: 3px;
     border-radius:20px ;
 }
-
+.con{
+    border-style: dotted;
+    background-color: #64b5f6;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-radius: 20px;
+}
 
