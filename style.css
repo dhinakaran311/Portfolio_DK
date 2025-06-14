@@ -1,85 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.portfolio{
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f8fc;
-    color: #333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color:#333;
+    background-color: #fff;
+    background-image: url(./assets/images/back2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 20px;
+}
 
+h1,h2,h3,h4{
+    margin-bottom: 10px;
+    color: #2c3e50;
 }
-h1, h2, h3, h4 {
-  color:black; 
-  /* #0d47a1  */
-  margin: 15px;
+a{
+    text-decoration: none;
+    color: #1c7fe2;
+    transition: color 0.3s;
 }
-p{
-    margin: 20px;
+a:hover{
+    color: #137dda;
 }
-figure>img{
-    border-radius: 300px;
-    border-style: groove;
+header{
+    margin-bottom:30px;
 }
-hr {
-  border: 1px solid #ccc;
-  margin: 20px 0;
+nav{
+    background-color: #a8d8f7;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    padding: 15px 0;
+    border-radius: 10px;
 }
-header {
-  background-color: #e3f2fd;
-  border-radius:20px;
-  padding: 15px 10px;
+nav a{
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px tgba(0,0,0,0.1);
+    transition: transform 0.5s;
+}
+nav a:hover{
+    background-color: #137dda;
+    color: white;
+    transform: translateY(-13px);
+}
+
+.profile-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.profile-img{
+    border-radius: 10px;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+.profile-img:hover{
+    transform: scale(1.07);
+}
+#about blockquote{
+    background-color: #a8d8f7;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #137dda;
+    margin: 20px 0;
+}
+#edu{
+    display: grid;
+    grid-template-columns:repeat(autofit,minmax(300px,1fr)) ;
+    gap: 30px;
+}
+.collage,.schl{
+    background-color:#a8d8f7;
+    padding: 20px;
+    border-radius: 8px;
+}
+.archivement,.ceri{
+    background-color: #a8d8f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.archivement ul,.ceri ul{
+    list-style: none;
+}
+.ceri ol,.ceri ul{
+    margin-left: 25px;
+}
+.pro{
+    background-color: #a8d8f7;
+    padding: 25px;
+    border-radius: 8px;
+}
+.pro details ul,.pro details ol{
+    list-style-position: inside ;
+}
+.pro article{
+    display: grid;
+    gap: 20px;
+}
+.ski{
+    display: grid;
+    grid-template-columns: repeat(minmax(250,1fr));
+    gap: 20px;
+}
+.ski ul{
+    list-style-position: inside;
+}
+.ski article{
+    background-color: #a8d8f7;
+    padding: 20px;
+    border-radius: 8px;
+}
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+table td{
+    background-color: #a8d8f7;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+table td:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+ .resume-btn{
+    display: block;
+    padding: 25px 50px;
+    background-color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border: 3px solid #b7ccde;
+    width: fit-content;
+    margin: 20px auto;
+ }
+ .resume-btn:hover{
+    background-color: #137dda;
+    color: white;
+    transform: scale(1.06);
+ }
+
+ .con-form{
+    background-color: #a8d8f7;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+ }
+ #form-list{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+ }
+ #form-list input{
+    width: 250px;
+    line-height: 1.5rem;
+    border-radius: 10px;
+    border-color: #b7ccde;
+ }
+ .form-group input:focus {
+  border-color: #333;
+}
+.button{
+  width: 120px;
+  padding: 10px;
+  background-color: #fff;
+  color: #137dda;
+  font-weight:bold;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.button:hover {
+  background-color: #137dda;
+  color: white;
+  transform: scale(1.09);
+}
+footer {
   text-align: center;
-  border-bottom: 2px solid #90caf9;
+  padding: 20px;
+  background-color: #a8d8f7;
+  border-radius: 8px;
+  margin-top: 30px;
 }
-nav a {
-text-decoration:none;
-  color: #0d47a1;
-  font-weight: bold;
-  margin: 0 12px;
-  font-size: 16px;
+@media (max-width: 600px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  #edu,.ski {
+    grid-template-columns: 1fr;
+  }
+    table td{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid rgb(137, 184, 214);
+    border-radius: 10px;
+    margin: 10px;
+  }
+  nav a:hover 
+  {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 }
-nav a:hover {
-  color: #1976d2;
-  text-decoration:underline;
-}
-section, article, blockquote {
-  padding: 0 20px;
-  margin-bottom: 30px;
-}
-blockquote {
-  background-color: #e3f2fd;
-  border-left: 6px solid #2196f3;
-  padding: 15px;
-  border-radius: 20px;
-  margin: 20px;
-  font-style: italic;
-}
-address {
-  font-style: normal;
-  color: #444;
-}
-.collage,.schl,.ceri,.archivement,.pro,.ski{
-  background-color: #e3f2fd;
-  border-left: 6px solid #2196f3;
-  padding: 15px;
-  border-radius: 20px;
-  margin: 20px;
-}
-#about,#edu,#arch,#project,#skill{
-    background-color: 	#64b5f6;
-    padding-bottom: 5px;
-    padding-top: 3px;
-    border-radius:20px ;
-}
-#platform{
-    margin-right: 10px;
-    background-color: 	#64b5f6;
-    padding-bottom: 5px;
-    padding-top: 3px;
-    border-radius:20px ;
-}
-#con{
-    border-style: dotted;
-    background-color: #64b5f6;
-    margin-left: 350px;
-    margin-right: 350px;
-    border-radius: 20px;
-}
-
